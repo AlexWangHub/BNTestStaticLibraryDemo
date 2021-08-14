@@ -10,6 +10,8 @@
 		B831571226C7C2F2008883F1 /* BNTestStaticLibraryDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B831570826C7C2F2008883F1 /* BNTestStaticLibraryDemo.framework */; };
 		B831571726C7C2F3008883F1 /* BNTestStaticLibraryDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B831571626C7C2F3008883F1 /* BNTestStaticLibraryDemoTests.m */; };
 		B831571926C7C2F3008883F1 /* BNTestStaticLibraryDemo.h in Headers */ = {isa = PBXBuildFile; fileRef = B831570B26C7C2F2008883F1 /* BNTestStaticLibraryDemo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B831572426C7C3A5008883F1 /* BNLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = B831572226C7C3A5008883F1 /* BNLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B831572526C7C3A5008883F1 /* BNLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = B831572326C7C3A5008883F1 /* BNLibrary.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		B831571126C7C2F2008883F1 /* BNTestStaticLibraryDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BNTestStaticLibraryDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B831571626C7C2F3008883F1 /* BNTestStaticLibraryDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNTestStaticLibraryDemoTests.m; sourceTree = "<group>"; };
 		B831571826C7C2F3008883F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B831572226C7C3A5008883F1 /* BNLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNLibrary.h; sourceTree = "<group>"; };
+		B831572326C7C3A5008883F1 /* BNLibrary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNLibrary.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 			children = (
 				B831570B26C7C2F2008883F1 /* BNTestStaticLibraryDemo.h */,
 				B831570C26C7C2F2008883F1 /* Info.plist */,
+				B831572226C7C3A5008883F1 /* BNLibrary.h */,
+				B831572326C7C3A5008883F1 /* BNLibrary.m */,
 			);
 			path = BNTestStaticLibraryDemo;
 			sourceTree = "<group>";
@@ -93,6 +99,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B831572426C7C3A5008883F1 /* BNLibrary.h in Headers */,
 				B831571926C7C2F3008883F1 /* BNTestStaticLibraryDemo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B831572526C7C3A5008883F1 /* BNLibrary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +350,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = BNTestStaticLibraryDemo/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -349,6 +358,8 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = BNineCoding.com.BNTestStaticLibraryDemo;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -365,6 +376,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = BNTestStaticLibraryDemo/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -372,6 +384,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = BNineCoding.com.BNTestStaticLibraryDemo;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

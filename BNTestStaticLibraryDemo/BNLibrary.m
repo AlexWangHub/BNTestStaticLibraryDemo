@@ -9,4 +9,8 @@
 
 @implementation BNLibrary
 
+- (void)printHelloWorld {
+    NSLog(@"Hello World!");
+}
+
 @end
